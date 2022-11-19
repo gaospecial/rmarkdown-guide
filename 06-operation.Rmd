@@ -1558,7 +1558,7 @@ eval_asy <- function() {
 下面给出一个简单的示例，该示例代码来自于 <https://github.com/vectorgraphics/asymptote>，其输出如图 \@ref(fig:elevation) 所示：
 
 ````{verbatim}
-```{asy, elevation, fig.cap=' 用渐近线制作的 3D 图形。', eval=eval_asy()}
+```{asy, elevation, fig.cap=' 用渐近线制作的 3D 图形。'}
 import graph3;
 import grid3;
 import palette;
@@ -1578,7 +1578,7 @@ grid3(XYZgrid);
 ```
 ````
 
-```{asy echo=FALSE, fig.align='center', fig.retina=1, fig.width=6, cache=TRUE, elevation, fig.cap=' 用渐近线制作的 3D 图形。'}
+```{asy echo=FALSE, fig.align='center', fig.retina=1, fig.width=6, cache=TRUE, elevation, fig.cap=' 用渐近线制作的 3D 图形。', eval=eval_asy()}
 import graph3;
 import grid3;
 import palette;
@@ -1621,7 +1621,7 @@ writeLines(paste(x, y, sep = ','), 'sine.csv')
 然后用 Asymptote 读取该文件，并绘制出图 \@ref(fig:sine-curve)，对应的代码如下所示：
 
 ````md
-```{asy, sine-curve, fig.cap='将数据从 R 传递到渐近线以绘制图形', cache=TRUE, fig.width=6,fig.align='center',fig.retina=1, eval=eval_asy()}`r ''`
+```{asy, sine-curve, fig.cap='将数据从 R 传递到渐近线以绘制图形', cache=TRUE, fig.width=6,fig.align='center',fig.retina=1}`r ''`
 import graph;
 size(400,300,IgnoreAspect);
 settings.prc = false;
@@ -1647,7 +1647,7 @@ yaxis("$y$",LeftRight,RightTicks);
 ```
 ````
 
-```{asy sine-curve, echo=FALSE, fig.align='center', fig.retina=1, fig.width=6,fig.cap='将数据从 R 传递到渐近线以绘制图形'}
+```{asy sine-curve, echo=FALSE, fig.align='center', fig.retina=1, fig.width=6,fig.cap='将数据从 R 传递到渐近线以绘制图形', eval=eval_asy()}
 import graph;
 size(400,300,IgnoreAspect);
 settings.prc = false;
