@@ -15,7 +15,7 @@ knitr::include_graphics("images/02-rstudio.png")
 RStudio 编辑器默认将工作区域分为三个面板，其中左侧为为 R 的控制台 (console)，用于交互式的代码输入和输出；中间为编辑器 (editor)。右上包括当前 R 进程的环境，历史和连接等信息，右下包括文件浏览器，图和帮助文档等。读者可以通过菜单栏中的 Tools -\> Global Options -\> Pane Layout 调整面板的排列。
 
 
-## 安装 rmarkdown 包 {#install-rmarkdown}
+## 安装 rmarkdown 包 {#rmarkdown-install}
 
 R Markdown 文档的编译依赖于同名的 **rmarkdown** R 包，在控制台中输入如下命令安装：[^02-base-1]
 
@@ -230,7 +230,7 @@ cat ./.ssh/id_rsa.pub
 
 第 \@ref(install-rmarkdown) 节中，读者创建了 `untitled.Rmd` 源文件，这是 **rmarkdown** 自带的一个文档模版，目前读者不需要修改其中的内容，`untitled.Rmd` 原内容如下：
 
-````{verbatim}
+````{verbatim}`r ''`
 ---
 title: "Untitled"
 output: html_document
@@ -1283,7 +1283,7 @@ for (i in 1:2) {
 ```
 ````
 
-```{r, animation.hook="gifski", echo = FALSE}
+```{r, animation.hook="gifski", echo = FALSE, eval=FALSE}
 if (knitr::is_html_output()){
   for (i in 1:2) {
     pie(c(i %% 2, 6), col = c("red", "yellow"), labels = NA)

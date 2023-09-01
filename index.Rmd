@@ -24,7 +24,7 @@ always_allow_html: true
 
 # 前言 {-}
 
-```{r, setup, include=FALSE}
+```{r, include=FALSE}
 if (knitr::is_html_output()) {
   # ignore percentage widths for HTML output, unless they are used for multiple
   # figures side by side
